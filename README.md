@@ -11,7 +11,7 @@
 
 ---
 
-## 🌟 核心架构亮点 (UVM-like V3 Architecture)
+##  核心架构亮点 (UVM-like V3 Architecture)
 
 传统的 LLM 芯片设计 Agent 往往让大模型同时输出 RTL 代码与 Testbench 代码，这会导致严重的 **“双盲死锁 (Dual-blind Deadlock)”** 与 **“语法幻觉 (Syntax Hallucination)”**（LLM 常在激励代码中输出非法的 `initial` 嵌套或错误的 `module` 语法）。
 
@@ -45,7 +45,7 @@ graph TD
 
 ---
 
-## 📂 目录结构
+##  目录结构
 
 ```bash
 axi_lite_agent/
@@ -65,7 +65,7 @@ axi_lite_agent/
 
 ---
 
-## 🚀 快速开始
+##  快速开始
 
 ### 1. 依赖环境准备
 *   **Linux/WSL 环境**（推荐，用于真实 EDA 编译仿真）：
@@ -102,7 +102,7 @@ wsl python3 main.py
 
 ---
 
-## 📊 自愈运行日志示例（Async CDC 测试）
+## 自愈运行日志示例（Async CDC 测试）
 
 以**测试用例 2（跨时钟域）**为例，由于用户指定了 `axi_clk` 作为时钟名，而 VIP 使用了 `S_AXI_ACLK`。程序在真实 WSL 仿真下记录了以下完美的自愈轨迹：
 
@@ -134,6 +134,6 @@ axi_write(32'h00, 32'h00000001);
 
 ---
 
-## 🤝 开源协议
+## 开源协议
 
 本项目基于 [MIT License](LICENSE) 开源。欢迎大家在 EDA/GenAI 研究中进行二次开发与衍生！
