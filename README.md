@@ -1,4 +1,4 @@
-# AXI-Lite GenAI Agent (EDA 芯片设计自愈智能体 V3)
+# AXI-Lite GenAI Agent 
 
 [![Verilog-2005](https://img.shields.io/badge/Verilog-2005-green.svg)](https://en.wikipedia.org/wiki/Verilog)
 [![Python-3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
@@ -7,15 +7,15 @@
 
 本项目是一个专门针对 **AXI4-Lite 总线 Slave 控制器** 设计与硅前验证（Pre-silicon Verification）开发的 **GenAI 自愈智能体（Self-Healing Agent）**。
 
-我们引入了类似 **UVM (Universal Verification Methodology)** 的核心思想：**将总线协议驱动（静态 Verilog VIP）与验证测试激励（动态 JSON 指令列表）彻底隔离**，结合 Python 映射层和本地物理编译器（WSL Icarus Verilog），实现了芯片设计与仿真的 100% 自动闭环验证。
+我们引入了类似 **UVM ** 的核心思想：**将总线协议驱动（静态 Verilog VIP）与验证测试激励（动态 JSON 指令列表）彻底隔离**，结合 Python 映射层和本地物理编译器（ Icarus Verilog），实现了芯片设计与仿真的 100% 自动闭环验证。
 
 ---
 
-##  核心架构亮点 (UVM-like V3 Architecture)
+##  核心架构亮点 
 
-传统的 LLM 芯片设计 Agent 往往让大模型同时输出 RTL 代码与 Testbench 代码，这会导致严重的 **“双盲死锁 (Dual-blind Deadlock)”** 与 **“语法幻觉 (Syntax Hallucination)”**（LLM 常在激励代码中输出非法的 `initial` 嵌套或错误的 `module` 语法）。
+传统的 LLM 芯片设计 Agent 往往让大模型同时输出 RTL 代码与 Testbench 代码，这会导致严重的 **“双盲死锁 ”** 与 **“语法幻觉 ”**（LLM 常在激励代码中输出非法的 `initial` 嵌套或错误的 `module` 语法）。
 
-本项目通过以下 V3 架构彻底攻克了这一痛点：
+本项目通过以下 架构彻底攻克了这一痛点：
 
 ```mermaid
 graph TD
